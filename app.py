@@ -11,7 +11,7 @@ HTML = """
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>شات أصدقاء</title>
+<title>AmiChat</title>
 <style>
 body {
     margin: 0;
@@ -72,7 +72,7 @@ button {
 </style>
 </head>
 <body>
-<header>💬 شات أصدقاء</header>
+<header>💬 AmiChat</header>
 
 <div id="messages"></div>
 
