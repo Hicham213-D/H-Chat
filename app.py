@@ -1,9 +1,9 @@
+
+
 from flask import Flask, request, jsonify, render_template_string
 from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "friends-chat-secret"
-socketio = SocketIO(app, cors_allowed_origins=[])
 
 HTML = """
 <!DOCTYPE html>
@@ -11,8 +11,15 @@ HTML = """
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="manifest" href="/static/manifest.json">
+<meta name="theme-color" content="#1769aa">
 <title>AmiChat</title>
 <style>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/static/sw.js");
+}
+</script>
 body {
     margin: 0;
     background: #101827;
@@ -114,6 +121,11 @@ socket.on("chat_message", function(data) {
     document.getElementById("messages").appendChild(box);
 });
 </script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/static/sw.js");
+}
+</script>
 </body>
 </html>
 """
@@ -135,4 +147,3 @@ def handle_message(data):
 
 if __name__ == "__main__":
     socketio.run(app, host="0.0.0.0", port=8080)
-
