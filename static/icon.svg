@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="115" fill="#1769aa"/>
+  <path d="M95 125 Q95 95 125 95 H335 Q365 95 365 125 V255 Q365 285 335 285 H190 L125 335 V285 Q95 285 95 255Z" fill="white"/>
+  <path d="M205 245 H385 Q415 245 415 275 V365 Q415 395 385 395 H350 L305 435 V395 H205 Q175 395 175 365 V275 Q175 245 205 245Z" fill="#a9dcff"/>
+  <text x="255" y="240" font-size="145" font-weight="bold" text-anchor="middle" fill="#1769aa">A</text>
+</svg>
+
