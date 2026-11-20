@@ -3,3 +3,4 @@ Flask-SocketIO
 simple-websocket
 gunicorn
 Flask-SQLAlchemy
+psycopg[binary]
